@@ -1,0 +1,119 @@
+.header {
+  position: absolute;
+  top: 35px;
+  width: 100%;
+  z-index: 50;
+
+  &__row {
+    height: 85px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__menu {
+  }
+
+  &__logo {
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%);
+  }
+
+  @media (max-width: 767px) {
+    top: 15px;
+  }
+}
+.menu {
+
+  &__icon {
+  }
+
+  &__body {
+  }
+
+  &__list {
+    display: flex;
+    li {
+      position: relative;
+      padding: 0 37.5px;
+      &:nth-child(2) {
+        padding: 0 110px 0 37.5px;
+      }
+      &:nth-child(3) {
+        padding: 0 37.5px 0 110px;
+      }
+      &:after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 50%;
+        margin: -2px 0 0 0;
+        width: 4px;
+        height: 4px;
+        background-color: #4d4959;
+        border-radius: 50%;
+      }
+      &:nth-child(2),
+      &:last-child {
+        &:after {
+          display: none;
+        }
+      }
+
+    }
+  }
+
+  &__link {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2.6px;
+    color: #4d4959;
+    ;
+  }
+  @media (max-width: 767px) {
+    &__body {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      padding: 150px 0 20px 0;
+      background-color: #4d4959;
+    }
+    &__list {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      li {
+        padding: 0 0 45px 0;
+        &:nth-child(2),
+        &:nth-child(3) {
+          padding: 0 0 45px 0;
+        }
+        &:last-child {
+          padding: 0;
+        }
+        &:after {
+          content: '';
+          width: 4px;
+          height: 4px;
+          right: 50%;
+          top: 40px;
+          margin: 0 -2px 0 0;
+          background-color: #fff;
+        }
+      }
+
+    }
+    &__link {
+      font-size: 20px;
+      color: #fff;
+    }
+  }
+}
+.icon-menu {
+}

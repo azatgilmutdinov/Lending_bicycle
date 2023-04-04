@@ -22,7 +22,9 @@
     }
   }
 
-  &__social {}
+  &__social {
+
+  }
 
   &__dev {}
 
@@ -56,6 +58,10 @@
 
   &__link {
     margin: 0 7.5px;
+    &:hover {
+      border-radius: 50%;
+      box-shadow: 0px 0px 25px 5px rgba(41, 113, 59, 0.3);
+    }
   }
 }
 .footer-dev {

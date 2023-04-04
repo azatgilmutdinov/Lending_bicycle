@@ -160,6 +160,11 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 2.6px;
   color: #4d4959;
 }
+.menu__link:hover {
+  color: #006c42;
+  -webkit-transition: all 0.1s ease 0s;
+  transition: all 0.1s ease 0s;
+}
 @media (max-width: 767px) {
   .menu__body {
     width: 100%;
@@ -300,6 +305,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 .footer-social__link {
   margin: 0 7.5px;
+}
+.footer-social__link:hover {
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 0px 25px 5px rgba(41, 113, 59, 0.3);
+          box-shadow: 0px 0px 25px 5px rgba(41, 113, 59, 0.3);
 }
 
 .footer-dev {
@@ -533,6 +543,8 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
 }
 .item-block:hover .item-block__logo {
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
   opacity: 1;
   visibility: visible;
 }
@@ -546,7 +558,7 @@ h1, h2, h3, h4, h5, h6 {
 /*============block SLIDER==============================*/
 .slider {
   background-color: #f7f7f7;
-  padding: 120px 0 60px 0;
+  padding: 60px 0 60px 0;
   text-align: center;
 }
 .slider__icon {
@@ -601,6 +613,11 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
   border: 1px solid rgba(255, 255, 255, 0.5);
   color: #fff;
+}
+.shop__btn:hover {
+  background-color: #434f57;
+  -webkit-transition: all 0.2s ease 0s;
+  transition: all 0.2s ease 0s;
 }
 @media (max-width: 1100px) {
   .shop__body {

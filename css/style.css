@@ -95,6 +95,7 @@ h1, h2, h3, h4, h5, h6 {
 .header {
   position: absolute;
   top: 35px;
+  left: 0;
   width: 100%;
   z-index: 50;
 }
@@ -161,19 +162,29 @@ h1, h2, h3, h4, h5, h6 {
   color: #4d4959;
 }
 .menu__link:hover {
+  display: block;
+  -webkit-transform: translate(0px, -2px);
+          transform: translate(0px, -2px);
   color: #006c42;
   -webkit-transition: all 0.1s ease 0s;
   transition: all 0.1s ease 0s;
 }
 @media (max-width: 767px) {
   .menu__body {
+    position: fixed;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
     overflow: auto;
     padding: 150px 0 20px 0;
+    -webkit-transform: translate3d(0px, -100%, 0px);
+            transform: translate3d(0px, -100%, 0px);
     background-color: #4d4959;
+  }
+  .menu__body.active {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+            transform: translate3d(0px, 0px, 0px);
   }
   .menu__list {
     -webkit-box-orient: vertical;
@@ -201,13 +212,16 @@ h1, h2, h3, h4, h5, h6 {
     width: 4px;
     height: 4px;
     right: 50%;
-    top: 40px;
+    top: 45px;
     margin: 0 -2px 0 0;
     background-color: #fff;
   }
   .menu__link {
     font-size: 20px;
     color: #fff;
+  }
+  .menu__link:hover {
+    color: #69c7a3;
   }
 }
 
@@ -223,12 +237,14 @@ h1, h2, h3, h4, h5, h6 {
     z-index: 5;
   }
   .icon-menu span {
+    -webkit-transition: all 0.1s ease 0s;
+    transition: all 0.1s ease 0s;
     top: 8px;
     left: 0;
     position: absolute;
     width: 100%;
     height: 2px;
-    background-color: #fff;
+    background-color: #4d4959;
   }
   .icon-menu span:first-child {
     top: 0px;
@@ -237,10 +253,19 @@ h1, h2, h3, h4, h5, h6 {
     top: auto;
     bottom: 0;
   }
+  .icon-menu.active span {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    background-color: #fff;
+  }
   .icon-menu.active span:first-child {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
     top: 8px;
   }
   .icon-menu.active span:last-child {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
     bottom: 8px;
   }
 }
@@ -308,8 +333,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 .footer-social__link:hover {
   border-radius: 50%;
-  -webkit-box-shadow: 0px 0px 25px 5px rgba(41, 113, 59, 0.3);
-          box-shadow: 0px 0px 25px 5px rgba(41, 113, 59, 0.3);
+  -webkit-transform: translate(2px, -5px);
+          transform: translate(2px, -5px);
 }
 
 .footer-dev {

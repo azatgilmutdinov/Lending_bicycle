@@ -1,6 +1,7 @@
 .header {
   position: absolute;
   top: 35px;
+  left: 0;
   width: 100%;
   z-index: 50;
 
@@ -73,20 +74,27 @@
     letter-spacing: 2.6px;
     color: #4d4959;
     &:hover {
+      display: block;
+      transform: translate(0px, -2px);
       color: #006c42;
       transition: all 0.1s ease 0s;
     }
   }
   @media (max-width: 767px) {
     &__body {
-      // position: fixed;
+      position: fixed;
       width: 100%;
       height: 100%;
       top: 0;
       left: 0;
       overflow: auto;
       padding: 150px 0 20px 0;
+      transform: translate3d(0px, -100%, 0px);
+      // transition: all 0.3s ease 0s;
       background-color: #4d4959;
+      &.active {
+        transform: translate3d(0px, 0px, 0px);
+      }
     }
     &__list {
       flex-direction: column;
@@ -106,7 +114,7 @@
           width: 4px;
           height: 4px;
           right: 50%;
-          top: 40px;
+          top: 45px;
           margin: 0 -2px 0 0;
           background-color: #fff;
         }
@@ -116,6 +124,9 @@
     &__link {
       font-size: 20px;
       color: #fff;
+      &:hover {
+        color: #69c7a3;
+      }
     }
   }
 
@@ -132,13 +143,13 @@
     cursor: pointer;
     z-index: 5;
     span {
-      // @include anim(0.3s, 0s);
+      transition: all 0.1s ease 0s;
       top: 8px;
       left: 0;
       position: absolute;
       width: 100%;
       height: 2px;
-      background-color: #fff;
+      background-color: #4d4959;
       &:first-child {
         top: 0px;
       }
@@ -149,13 +160,14 @@
     }
     &.active {
       span {
-      //   @include scale(0);
+        transform: scale(0);
+        background-color: #fff;
         &:first-child {
-          // @include rotate(-45deg);
+          transform: rotate(-45deg);
           top: 8px;
         }
         &:last-child{
-          // @include rotate(45deg);
+          transform: rotate(45deg);
           bottom: 8px;
         }
       }

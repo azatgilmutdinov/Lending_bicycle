@@ -1,3 +1,4 @@
+//Функция для фона-картинки
 function ibg(){
 
   let ibg = document.querySelectorAll(".ibg");
@@ -7,5 +8,15 @@ function ibg(){
     }
   }
 }
-  
 ibg();
+
+//Меню бургер
+let iconMenu = document.querySelector(".icon-menu");
+let body = document.querySelector("body");
+let menuBody = document.querySelector(".menu__body");
+
+iconMenu.addEventListener("click", (e) => {
+  iconMenu.classList.toggle("active");
+  body.classList.toggle("lock");
+  menuBody.classList.toggle("active");
+});
